@@ -1,0 +1,35 @@
+{
+  "name": "@arcticzeroo/lock",
+  "version": "1.0.0",
+  "description": "Concurrency control primitives for async JavaScript: Lock, MultiLock, and Semaphore",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "lock",
+    "mutex",
+    "semaphore",
+    "concurrency",
+    "async"
+  ],
+  "author": "arcticzeroo",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
