@@ -1,5 +1,5 @@
 {
-  "name": "@arcticzeroo/lock",
+  "name": "@frozor/lock",
   "version": "1.0.0",
   "description": "Concurrency control primitives for async JavaScript: Lock, MultiLock, and Semaphore",
   "type": "module",
@@ -29,6 +29,7 @@
   "author": "arcticzeroo",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^25.5.2",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }

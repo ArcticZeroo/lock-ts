@@ -1,11 +1,11 @@
-# @arcticzeroo/lock
+# @frozor/lock
 
 Concurrency control primitives for async JavaScript/TypeScript: **Lock**, **MultiLock**, and **Semaphore**.
 
 ## Installation
 
 ```bash
-npm install @arcticzeroo/lock
+npm install @frozor/lock
 ```
 
 ## API
@@ -15,7 +15,7 @@ npm install @arcticzeroo/lock
 A mutual exclusion lock. Only one `acquire` call runs at a time; others queue up in FIFO order.
 
 ```ts
-import { Lock } from '@arcticzeroo/lock';
+import { Lock } from '@frozor/lock';
 
 const lock = new Lock();
 
@@ -38,7 +38,7 @@ console.log(lock.queueLength);
 Manages independent locks keyed by string ID. Locks are created on demand and cleaned up automatically when their queue drains.
 
 ```ts
-import { MultiLock } from '@arcticzeroo/lock';
+import { MultiLock } from '@frozor/lock';
 
 const locks = new MultiLock();
 
@@ -60,7 +60,7 @@ await Promise.all([
 Limits concurrency to a maximum number of simultaneous operations.
 
 ```ts
-import { Semaphore } from '@arcticzeroo/lock';
+import { Semaphore } from '@frozor/lock';
 
 // Allow up to 3 concurrent requests
 const semaphore = new Semaphore(3);
@@ -85,7 +85,7 @@ await semaphore.acquire(() => doWork()); // runs immediately
 Utility type used by all `acquire` methods. Your work callback can return either `T` or `Promise<T>`.
 
 ```ts
-import type { MaybePromise } from '@arcticzeroo/lock';
+import type { MaybePromise } from '@frozor/lock';
 ```
 
 ## License
